@@ -13,22 +13,41 @@ This repository contains my JavaScript learning journey, covering fundamental co
 - **5_datatypes_summary.js** - Summary of data types concepts
 - **6_String.js** - String methods and manipulation
 
+### 02_basics/
+- **1_arrays.js** - Array methods and manipulation
+- **2_objects.js** - Object creation, properties, and methods
+
+### 03_basics/
+- **1_functions.js** - Function declarations, parameters, and return values
+- **2_scope.js** - Understanding scope and variable accessibility
+- **3_arrowFunction.js** - Arrow function syntax and behavior
+- **4_iife.js** - Immediately Invoked Function Expressions (IIFE)
+
 ## 🎯 Learning Objectives
 
-- Master JavaScript fundamentals
-- Understand data types and their behaviors
-- Learn string manipulation techniques
-- Practice variable declarations and scoping
-- Explore type conversion and comparison operations
+- ✅ Master JavaScript fundamentals
+- ✅ Understand data types and their behaviors
+- ✅ Learn string manipulation techniques
+- ✅ Practice variable declarations and scoping
+- ✅ Explore type conversion and comparison operations
+- ✅ Work with arrays and objects
+- � Master functions and different function types
+- 🔄 Understand scope and closures
+- 🔄 Learn advanced function concepts
 
 ## 🚀 Progress
 
-Currently working through JavaScript basics, focusing on:
-- Core syntax and structure
-- Data types and their properties
-- String methods like `slice()`, `substring()`, `charAt()`, etc.
-- Template literals and string interpolation
-- Type conversion best practices
+**Completed:**
+- ✅ JavaScript basics (syntax, data types, variables, strings)
+- ✅ Arrays and Objects fundamentals
+- 🔄 **Currently learning:** Functions and scope concepts
+
+**Current Focus:**
+- Function declarations vs expressions
+- Arrow functions and their differences
+- Scope (global, function, block)
+- IIFE for avoiding global scope pollution
+- Parameter handling and return statements
 
 ---
 *Personal learning repository for JavaScript practice and reference*
