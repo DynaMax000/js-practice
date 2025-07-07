@@ -19,6 +19,10 @@
     <div class="day">Thursday</div>
     <div class="day">Friday</div>
   </div>
+
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
 </body>
 <script>
   const parent = document.querySelector('.parent');
@@ -64,6 +68,34 @@
   // div.innerHTML = "Hello World";
 
   parent.appendChild(div);
+
+  function addLanguage(langName) {
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`;
+    document.querySelector('.language').appendChild(li);
+  }
+  addLanguage("Python");
+
+  function optiAddLanguage(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+  }
+  optiAddLanguage('C++');
+
+  // edit 
+  const secondEl = document.querySelector('li:nth-child(2)');
+  const newLi = document.createElement('li');
+  newLi.textContent = "New Item";
+  secondEl.replaceWith(newLi);
+
+  // edit 
+  const firstEl = document.querySelector('li:first-child');
+  firstEl.outerHTML = "<li>Updated JavaScript</li>";
+
+  // remove
+  const lastEl = document.querySelector('li:last-child');
+  lastEl.remove();
 </script>
 </html>
 

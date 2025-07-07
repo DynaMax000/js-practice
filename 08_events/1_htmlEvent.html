@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Events</title>
+</head>
+<style>
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  #images li {
+    list-style-type: none;
+  }
+</style>
+
+<body>
+  <ul id="images">
+    <li><img width="200px"
+        src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+        alt="image1"></li>
+    <li><img width="200px"
+        src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+        alt="image2"></li>
+    <li><img width="200px"
+        src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+        alt="image3" id="img3"></li>
+
+    <li><a href="https:/www.google.com" id="google">Google</a></li>
+  </ul>
+</body>
+<script>
+  // Using inline event handler (not recommended)
+  // document.getElementById('img3').onclick = function () {
+  //  alert('Image 3 clicked!');
+  // };
+
+  // Using addEventListener (recommended)
+  document.getElementById('images').addEventListener('click', (e) => {
+    // console.log("clicked"); // e.target is the element that was clicked
+    // alert('Image 3 clicked!');
+    // console.log(e);
+    // console.log(e.timeStamp); // Timestamp of the event
+    // console.log(e.type); // Type of the event
+    // defaultPrevented
+    // target
+    // toElement
+    // currentTarget
+    // srcElement
+    // clientX, clientY, screenX, screenY, offsetX, offsetY
+    // altKey, ctrlKey, shiftKey, keyCode, metaKey
+  });
+  // false indicates the event is captured in the bubbling phase
+  // true indicates the event is captured in the capturing phase
+
+  document.getElementById('img3').addEventListener('click', (e) => {
+    // e.preventDefault(); // Prevents the default action of the event
+    // console.log("Owl clicked");;
+    // e.stopPropagation(); // Stops the event from bubbling up to parent elements
+  });
+
+  document.getElementById('google').addEventListener('click', (e) => {
+    // e.preventDefault(); // Prevents the default action of the event
+    // e.stopPropagation(); 
+    // console.log("Google link clicked");
+  });
+
+  // attachEvent() Listner
+  // Note: attachEvent is an old method and not recommended for modern browsers.
+  // It is primarily used for older versions of Internet Explorer.
+
+  // jQuery - on EventListner
+
+  document.getElementById('images').addEventListener('click', (e) => {
+    console.log(event.target.tagName); // This will log the tag name of the clicked element
+    if (event.target.tagName === 'IMG') {
+      let removeLi = event.target.parentNode;
+      removeLi.remove(); // this will remove the clicked list item
+    }
+    // if you click on the image, it will remove the entire <li> element
+    // if you select li, it will remove the parent <ul> element
+    // removeLi.parentNode.removeChild(removeLi);
+  });
+</script>
+
+</html>
